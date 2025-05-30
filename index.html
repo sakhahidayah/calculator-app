@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="h-screen w-screen flex bg-[#fa30aa]">
+    <div
+      class="min-w-60 p-1 bg-white rounded h-[430px] m-auto flex flex-col justify-between"
+    >
+      <div class="h-full flex items-center justify-end p-2">
+        <div id="result"></div>
+      </div>
+      <div class="flex flex-row gap-2 justify-end p-2">
+        <button id="results" class="font-bold cursor-pointer">RES</button>
+        <button id='delete' class="font-bold cursor-pointer">DEL</button>
+      </div>
+      <div class="flex flex-row justify-center gap-1">
+        <div class="grid grid-cols-3 gap-2 font-bold">
+          <button
+            id="btn"
+            value="1"
+            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+          >
+            1
+          </button>
+          <button
+            id="btn"
+            value="2"
+            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+          >
+            2
+          </button>
+          <button
+            id="btn"
+            value="3"
+            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+          >
+            3
+          </button>
+          <button
+            id="btn"
+            value="4"
+            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+          >
+            4
+          </button>
+          <button
+            id="btn"
+            value="5"
+            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+          >
+            5
+          </button>
+          <button
+            id="btn"
+            value="6"
+            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+          >
+            6
+          </button>
+          <button
+            id="btn"
+            value="7"
+            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+          >
+            7
+          </button>
+          <button
+            id="btn"
+            value="8"
+            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+          >
+            8
+          </button>
+          <button
+            id="btn"
+            value="9"
+            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+          >
+            9
+          </button>
+          <button
+            id="btn"
+            value="."
+            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+          >
+            .
+          </button>
+          <button
+            id="btn"
+            value="0"
+            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer col-span-2 text-center"
+          >
+            0
+          </button>
+        </div>
+        <div class="flex flex-col gap-2">
+          <button
+            id="calculation" value="%"
+            class="bg-[rgba(250,48,170,255)] p-5 rounded cursor-pointer"
+          >
+            /
+          </button>
+          <button
+            id="calculation" value="+"
+            class="bg-[rgba(250,48,170,255)] p-5 rounded cursor-pointer"
+          >
+            +
+          </button>
+          <button
+            id="calculation" value="-"
+            class="bg-[rgba(250,48,170,255)] p-5 rounded cursor-pointer"
+          >
+            -
+          </button>
+          <button
+            id="calculation" value="*"
+            class="bg-[rgba(250,48,170,255)] p-5 rounded cursor-pointer"
+          >
+            <p>x</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
