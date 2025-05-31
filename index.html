@@ -5,120 +5,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/f7964b657f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body class="h-screen w-screen flex bg-[#fa30aa]">
     <div
-      class="min-w-60 p-1 bg-white rounded h-[430px] m-auto flex flex-col justify-between"
+      id="container"
+      class="min-w-60 p-1 bg-white rounded h-[430px] m-auto flex flex-col"
     >
-      <div class="h-full flex items-center justify-end p-2">
-        <div id="result" class="font-bold"></div>
+      <div class="flex flex-row relative">
+        <p id="darkMode">
+          <i
+          id="darkToggle"
+            class="fas border rounded-full w-8 h-8 text-center ml-2 mt-1 p-1 text-xl cursor-pointer hover:bg-black absolute hover:text-white"
+            >&#xf186;</i
+          >
+        </p>
+        <p id="lightMode" class="hidden">
+          <i
+          id="lightToggle"
+            class="material-icons border rounded-full w-8 h-8 text-center ml-2 mt-1 p-1 text-xl cursor-pointer absolute hover:bg-white hover:text-black"
+            >&#xe430;</i
+          >
+        </p>
+      </div>
+      <div class="h-full flex flex-col items-end justify-end p-2">
+        <div id="result" class="font-bold text-xl"></div>
+        <div id="history" class="font-bold text-slate-400 text-xs"></div>
       </div>
       <div class="flex flex-row gap-2 justify-end p-2">
-        <button id="results" class="font-bold cursor-pointer">RES</button>
-        <button id='delete' class="font-bold cursor-pointer">DEL</button>
+        <button
+          id="results"
+          class="font-bold cursor-pointer hover:text-slate-600"
+        >
+          RESULT
+        </button>
+        <button
+          id="delete"
+          class="font-bold cursor-pointer hover:text-slate-600"
+        >
+          DELETE
+        </button>
       </div>
       <div class="flex flex-row justify-center gap-1">
         <div class="grid grid-cols-3 gap-2 font-bold">
           <button
-            id="btn"
+            
             value="1"
-            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+            class="btn bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer hover:bg-slate-300"
           >
             1
           </button>
           <button
-            id="btn"
+          
             value="2"
-            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+            class="btn bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer hover:bg-slate-300"
           >
             2
           </button>
           <button
-            id="btn"
+          
             value="3"
-            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+            class="btn bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer hover:bg-slate-300"
           >
             3
           </button>
           <button
-            id="btn"
+          
             value="4"
-            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+            class="btn bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer hover:bg-slate-300"
           >
             4
           </button>
           <button
-            id="btn"
+          
             value="5"
-            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+            class="btn bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer hover:bg-slate-300"
           >
             5
           </button>
           <button
-            id="btn"
+          
             value="6"
-            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+            class="btn bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer hover:bg-slate-300"
           >
             6
           </button>
           <button
-            id="btn"
+          
             value="7"
-            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+            class="btn bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer hover:bg-slate-300"
           >
             7
           </button>
           <button
-            id="btn"
+          
             value="8"
-            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+            class="btn bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer hover:bg-slate-300"
           >
             8
           </button>
           <button
-            id="btn"
+          
             value="9"
-            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+            class="btn bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer hover:bg-slate-300"
           >
             9
           </button>
           <button
-            id="btn"
+          
             value="."
-            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer"
+            class="btn bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer hover:bg-slate-300"
           >
             .
           </button>
           <button
-            id="btn"
+          
             value="0"
-            class="bg-[rgba(226,226,226,255)] p-5 rounded cursor-pointer col-span-2 text-center"
+            class="btn bg-[rgba(226,226,226,255)] col-span-2 p-5 rounded cursor-pointer hover:bg-slate-300"
           >
             0
           </button>
         </div>
         <div class="flex flex-col gap-2">
           <button
-            id="calculation" value="/"
-            class="bg-[rgba(250,48,170,255)] p-5 rounded cursor-pointer"
+            id="calculation"
+            value="/"
+            class="bg-[rgba(250,48,170,255)] p-5 rounded cursor-pointer hover:bg-pink-300"
           >
             /
           </button>
           <button
-            id="calculation" value="+"
-            class="bg-[rgba(250,48,170,255)] p-5 rounded cursor-pointer"
+            id="calculation"
+            value="+"
+            class="bg-[rgba(250,48,170,255)] p-5 rounded cursor-pointer hover:bg-pink-300"
           >
             +
           </button>
           <button
-            id="calculation" value="-"
-            class="bg-[rgba(250,48,170,255)] p-5 rounded cursor-pointer"
+            id="calculation"
+            value="-"
+            class="bg-[rgba(250,48,170,255)] p-5 rounded cursor-pointer hover:bg-pink-300"
           >
             -
           </button>
           <button
-            id="calculation" value="*"
-            class="bg-[rgba(250,48,170,255)] p-5 rounded cursor-pointer"
+            id="calculation"
+            value="*"
+            class="bg-[rgba(250,48,170,255)] p-5 rounded cursor-pointer hover:bg-pink-300"
           >
             <p>x</p>
           </button>
