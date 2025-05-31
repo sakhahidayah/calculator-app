@@ -63,7 +63,7 @@ darkToggle.addEventListener("click", () => {
   container.classList.add("bg-[#151434]", "text-white");
   buttons.forEach((button) => {
     button.classList.remove("bg-[rgba(226,226,226,255)]");
-    button.classList.add("bg-[#2d2b46]");
+    button.classList.add("bg-[#2d2b46]", 'hover:text-black');
   });
 });
 
